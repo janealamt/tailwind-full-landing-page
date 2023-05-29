@@ -4,12 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Banking Website</title>
+
+     <!-- font awesome link -->
+     <script src="https://kit.fontawesome.com/0df8631209.js" crossorigin="anonymous"></script>
     <!-- css link -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    hello world
+<body class="bg-primary-colors text-white " >
+   <header>
+
+    <nav class="container flex justify-between  items-center px-5 md:px-0 ">
+        <div class="text-white font-bold text-3xl py-5">
+            <a href="#" >Web<span class="text-color-secondary font-light ">Landing.</span></a>
+        </div>
+        <div>
+            <ul class="hidden  lg:flex items-center space-x-6  ">
+                <li><a href="#"  class="hover:text-color-secondary ease-in duration-300">Home</a></li>
+                <li><a href="#" class="hover:text-color-secondary ease-in duration-300">Blog</a></li>
+                <li><a href="#" class="hover:text-color-secondary ease-in duration-300">testimonials</a></li>
+                <li><a href="#" class="hover:text-color-secondary ease-in duration-300">Contact</a></li>
+                <li><a href="#" class="hover:text-color-secondary ease-in duration-300">About</a></li>
+
+                <li><buton class="font-bold bg-color-secondary py-2 px-3 hover:opacity-80 rounded shadow shadow-gray-950 hover:shadow-none">Sign Up</buton></li>
+                <li><buton class="hover:font-bold hover:bg-color-secondary hover:opacity-80 py-2 px-3 hover:shadow hover:shadow-gray-950 rounded">Log In</buton></li>
+            </ul>
+        </div>
+        <!-- mobile device -->
+        <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+            <i class="fa-solid fa-bars text-3xl"></i>
+        </div>
+        <div id="menu" class="hidden lg:hidden bg-color-primary-dark absolute inset-0 h-[100vh] py-20">
+            <ul class="h-full grid place-items-center ">
+                <li><a href="#" class="text-white font-bold text-3xl py-5" >Web<span class="text-color-secondary font-light ">Landing.</span></a></li>
+                <li><a href="#" id="hLink" class="hover:text-color-secondary ease-in duration-300">Home</a></li>
+                <li><a id="hLink" href="#" class="hover:text-color-secondary ease-in duration-300">Blog</a></li>
+                <li><a id="hLink" href="#" class="hover:text-color-secondary ease-in duration-300">testimonials</a></li>
+                <li><a id="hLink" href="#" class="hover:text-color-secondary ease-in duration-300">Contact</a></li>
+                <li><a id="hLink" href="#" class="hover:text-color-secondary ease-in duration-300">About</a></li>
+
+                <li><buton class="font-bold bg-color-secondary py-2 px-3 hover:bg-orange-500 rounded shadow shadow-gray-950 hover:shadow-none">Sign Up</buton></li>
+                <li><buton class="font-bold hover:bg-color-secondary py-2 px-3 hover:shadow hover:shadow-gray-950 rounded">Log In</buton></li> 
+            </ul>
+        </div>
+    </nav>
+   </header>
+
+   <main>
+    <section id="hero-section " class="relative">
+        <div class="h-80 w-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-10 overflow-hidden rounded-full"></div>
+        <div class="h-80 w-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-10 overflow-hidden rounded-full"></div>
+        <div class="container px-5 md:px-0  py-20">
+
+            <div class="flex md:justify-between items-center z-20 flex-col md:flex-row">
+
+                <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                    <h1 class="title mb-4 text-3xl font-bold md:4xl lg:6xl">Awesome App for Your Financial</h1>
+                    <p class="mb-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid facere maiores repudiandae pariatur aut impedit obcaecati. Ipsam repellat dolores numquam?</p>
+                    <buton class="font-bold bg-color-secondary py-3 px-9 hover:opacity-80 rounded shadow shadow-gray-950 hover:shadow-none">Download App</buton>
+                </div>
+                <div class="md:w-1/2">
+                   <img src="/images/Isometric_Financial_Teamwork__Converted__generated-fotor-bg-remover-20230529131459.png"> 
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+   </main>
     
+
+   <script>
+    //mobile menu
+    // Mobile menu
+    const hamburger = document.querySelector('#hamburger');
+        const menu = document.querySelector('#menu');
+        const hLink = document.querySelectorAll('#hLink');
+        const faSolid = document.querySelector(".fa-solid");
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark');
+        })
+        hLink.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark');
+            })
+        })
+   </script>
 </body>
 </html>
