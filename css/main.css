@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    @apply font-bold bg-color-secondary py-3 px-9 hover:opacity-80 rounded shadow shadow-gray-950 hover:shadow-none duration-200;
+}
+
+.title{
+    @apply text-3xl md:text-4xl font-bold leading-snug
+}
+
+.section-padding{
+    @apply lg:px-20 px-10;
+}
+
+.bg-first-animation{
+    animation-name: bg-first-animation;
+    animation-duration: 5s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    transform-origin: left;
+    opacity: 0;
+
+}
+
+@keyframes bg-first-animation {
+    75%, 100% {
+      transform: scale(2);
+      opacity: .4;
+    }
+  }
